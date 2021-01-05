@@ -18,6 +18,7 @@ body {
 
 .main-container {
   max-width: 1200px;
+  width: 100%;
   padding: 1.5rem;
   margin: 0 auto;
   display: grid;
@@ -36,7 +37,7 @@ body {
 
 .content-wrapper {
   display: flex;
-  margin: 2rem;
+  margin: 2rem 0;
   justify-content: center;
   align-items: center;
   column-gap: 10%;
@@ -79,12 +80,19 @@ body {
   border: none;
   width: 216px;
   padding: 1rem;
+  transition: background-color 0.5s ease;
+}
+
+.error-back-button:hover {
+  cursor: pointer;
+  background: #000000;
 }
 
 .owner-footer {
   display: flex;
   margin-top: 6rem;
   justify-content: center;
+  padding: 10px;
 }
 
 .footer-title {
@@ -93,4 +101,27 @@ body {
   font-weight: 600;
   line-height: 17px;
   text-align: left;
+}
+
+@media only screen and (max-width: 769px) {
+  .main-container {
+    display: block;
+    padding: 1rem;
+  }
+
+  .content-wrapper {
+    margin: 4rem 0;
+    flex-direction: column;
+  }
+
+  .error-message-title {
+    margin-top: 36px;
+    font-size: 48px;
+    line-height: 71px;
+  }
+
+  .error-copy {
+    font-size: 18px;
+    line-height: 27px;
+  }
 }
